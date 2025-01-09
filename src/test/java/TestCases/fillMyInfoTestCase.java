@@ -24,9 +24,6 @@ public class fillMyInfoTestCase extends baseClass
 	 @Test
      public void fillMyInfo() throws IOException, InterruptedException, AWTException
      {
-          intializeBrowser();
-    	 
-    	 driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
     	 
     	 loginPageObject lpo= new loginPageObject(driver);
     	 
@@ -111,6 +108,7 @@ public class fillMyInfoTestCase extends baseClass
     	robot.keyRelease(KeyEvent.VK_ENTER);
     	
     	Thread.sleep(3000);
+    	//commonMethods.explictWait(driver, mipo.validationTextOnMyInfoPage(), 10);
     	commonMethods.handleAssertion(mipo.validationTextOnMyInfoPage().getText(), "PIM");
     	
      	 
