@@ -17,7 +17,7 @@ public class baseClass
 	  public Properties prop;
       public void intializeBrowser() throws IOException
       {
-    	   FileInputStream fis = new FileInputStream("E:\\SeleniumTestNGFrameworkProject\\Selenium8thJanTestNGProject\\src\\main\\java\\Resources\\data.properties");
+    	   FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\Resources\\data.properties");
     	   
     	   prop = new Properties();
     	   
@@ -67,7 +67,7 @@ public class baseClass
       @AfterClass
       public void quitBrowser() throws InterruptedException
       {
-    	  Thread.sleep(2000);
+    	  Thread.sleep(3000);
     	  driver.quit();
       }
       
