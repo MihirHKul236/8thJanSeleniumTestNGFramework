@@ -50,47 +50,47 @@ public class fillMyInfoTestCase extends baseClass
     	 Thread.sleep(2000);
     	 mipo.enterMiddleName().sendKeys(Keys.chord(Keys.CONTROL,"a",Keys.DELETE));
     	 Thread.sleep(2000);
-    	 mipo.enterMiddleName().sendKeys("Ramesh");
+    	 mipo.enterMiddleName().sendKeys(constant.middlename);
     	 
     	 Thread.sleep(2000);
     	 mipo.enterLastName().sendKeys(Keys.chord(Keys.CONTROL,"a",Keys.DELETE));
     	 Thread.sleep(2000);
-    	 mipo.enterLastName().sendKeys("Tendulkar");
+    	 mipo.enterLastName().sendKeys(constant.lastname);
     	 
     	 Thread.sleep(2000);
     	 mipo.enterEmployeeId().sendKeys(Keys.chord(Keys.CONTROL,"a",Keys.DELETE));
     	 Thread.sleep(2000);
-    	 mipo.enterEmployeeId().sendKeys("Virtusa203");
+    	 mipo.enterEmployeeId().sendKeys(constant.employeeid);
     	 
     	 Thread.sleep(2000);
     	 mipo.enterOtherId().sendKeys(Keys.chord(Keys.CONTROL,"a",Keys.DELETE));
     	 Thread.sleep(2000);
-    	 mipo.enterOtherId().sendKeys("SRT234");
+    	 mipo.enterOtherId().sendKeys(constant.otherid);
     	 
     	 Thread.sleep(2000);
     	 mipo.enterDrivingLicenseNumber().sendKeys(Keys.chord(Keys.CONTROL,"a",Keys.DELETE));
     	 Thread.sleep(2000);
-    	 mipo.enterDrivingLicenseNumber().sendKeys("MH15DK2345");
+    	 mipo.enterDrivingLicenseNumber().sendKeys(constant.drivinglicensenumber);
     	 
     	 Thread.sleep(2000);
     	 mipo.clickOnNationalityDropdown().click();
     	 
     	 Thread.sleep(2000);
-    	 commonMethods.handleDropdown(mipo.selectCountryFromDropdown(), "Indian");
+    	 commonMethods.handleDropdown(mipo.selectCountryFromDropdown(), constant.nationdropdowntext);
     	
     	 
     	 Thread.sleep(2000);
     	 mipo.clickOnStatusDropdown().click();
     	 
     	 Thread.sleep(2000);
-    	 commonMethods.handleDropdown(mipo.selectStatusFromDropdown(), "Married");
+    	 commonMethods.handleDropdown(mipo.selectStatusFromDropdown(), constant.statusdropdowntext);
     	
     	 
     	 Thread.sleep(3000);
     	 mipo.clickOnBloodGroupDropdown().click();
     	 
     	 Thread.sleep(2000);
-    	 commonMethods.handleDropdown(mipo.selectBloodGroupFromDropdown(), "B-");
+    	 commonMethods.handleDropdown(mipo.selectBloodGroupFromDropdown(), constant.bloodgroupdropdowntext);
     
     	 Thread.sleep(3000);
     	 mipo.clickOnAddButton().click();
@@ -110,7 +110,7 @@ public class fillMyInfoTestCase extends baseClass
     	
     	Thread.sleep(3000);
     	//commonMethods.explictWait(driver, mipo.validationTextOnMyInfoPage(), 10);
-    	commonMethods.handleAssertion(mipo.validationTextOnMyInfoPage().getText(), "PIM");
+    	commonMethods.handleAssertion(mipo.validationTextOnMyInfoPage().getText(),constant.myinfopagetext );
     	
      	 
     	 
