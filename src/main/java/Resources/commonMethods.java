@@ -1,8 +1,12 @@
 package Resources;
 
+import java.time.Duration;
 import java.util.List;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.asserts.SoftAssert;
 
 public class commonMethods 
@@ -32,4 +36,10 @@ public class commonMethods
    		   }
    	    }
     }
+    
+   public static void explictWait(WebDriver driver,WebElement xpath , int timeout)
+   {
+	   WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+	   wait.until(ExpectedConditions.visibilityOf(xpath));
+   }
 }

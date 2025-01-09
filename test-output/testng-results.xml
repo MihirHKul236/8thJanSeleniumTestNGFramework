@@ -2,22 +2,34 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-09T11:10:11 IST" name="Suite" finished-at="2025-01-09T11:12:18 IST" duration-ms="127742">
+  <suite started-at="2025-01-09T11:19:24 IST" name="Suite" finished-at="2025-01-09T11:21:41 IST" duration-ms="137093">
     <groups>
     </groups>
-    <test started-at="2025-01-09T11:10:11 IST" name="Test" finished-at="2025-01-09T11:12:18 IST" duration-ms="127742">
+    <test started-at="2025-01-09T11:19:24 IST" name="Test" finished-at="2025-01-09T11:21:41 IST" duration-ms="137093">
       <class name="TestCases.loginTestCases">
-        <test-method signature="verifyValidLogin()[pri:0, instance:TestCases.loginTestCases@36902638]" started-at="2025-01-09T11:10:11 IST" name="verifyValidLogin" finished-at="2025-01-09T11:10:33 IST" duration-ms="21921" status="PASS">
+        <test-method is-config="true" signature="urlLaunch()[pri:0, instance:TestCases.loginTestCases@1623b78d]" started-at="2025-01-09T11:19:24 IST" name="urlLaunch" finished-at="2025-01-09T11:19:34 IST" duration-ms="10706" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- urlLaunch -->
+        <test-method signature="verifyValidLogin()[pri:0, instance:TestCases.loginTestCases@1623b78d]" started-at="2025-01-09T11:19:34 IST" name="verifyValidLogin" finished-at="2025-01-09T11:19:48 IST" duration-ms="13471" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyValidLogin -->
-        <test-method signature="verifyInvalidLogin()[pri:1, instance:TestCases.loginTestCases@36902638]" started-at="2025-01-09T11:10:33 IST" name="verifyInvalidLogin" finished-at="2025-01-09T11:10:53 IST" duration-ms="20340" status="PASS">
+        <test-method is-config="true" signature="urlLaunch()[pri:0, instance:TestCases.loginTestCases@1623b78d]" started-at="2025-01-09T11:19:48 IST" name="urlLaunch" finished-at="2025-01-09T11:20:02 IST" duration-ms="14499" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- urlLaunch -->
+        <test-method signature="verifyInvalidLogin()[pri:1, instance:TestCases.loginTestCases@1623b78d]" started-at="2025-01-09T11:20:02 IST" name="verifyInvalidLogin" finished-at="2025-01-09T11:20:15 IST" duration-ms="12454" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyInvalidLogin -->
       </class> <!-- TestCases.loginTestCases -->
       <class name="TestCases.fillMyInfoTestCase">
-        <test-method signature="fillMyInfo()[pri:0, instance:TestCases.fillMyInfoTestCase@57a3af25]" started-at="2025-01-09T11:10:53 IST" name="fillMyInfo" finished-at="2025-01-09T11:12:18 IST" duration-ms="85438" status="PASS">
+        <test-method is-config="true" signature="urlLaunch()[pri:0, instance:TestCases.fillMyInfoTestCase@6302bbb1]" started-at="2025-01-09T11:20:15 IST" name="urlLaunch" finished-at="2025-01-09T11:20:24 IST" duration-ms="9418" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- urlLaunch -->
+        <test-method signature="fillMyInfo()[pri:0, instance:TestCases.fillMyInfoTestCase@6302bbb1]" started-at="2025-01-09T11:20:24 IST" name="fillMyInfo" finished-at="2025-01-09T11:21:41 IST" duration-ms="76485" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fillMyInfo -->
