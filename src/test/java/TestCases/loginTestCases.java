@@ -8,6 +8,7 @@ import org.testng.asserts.SoftAssert;
 import PageObjectModel.loginPageObject;
 import Resources.baseClass;
 import Resources.commonMethods;
+import Resources.constant;
 
 public class loginTestCases extends baseClass
 {
@@ -21,16 +22,16 @@ public class loginTestCases extends baseClass
     	 loginPageObject lpo= new loginPageObject(driver);
     	 
     	 Thread.sleep(2000);
-    	 lpo.enterUsername().sendKeys("Admin");
+    	 lpo.enterUsername().sendKeys(constant.validusername);
     	 
     	 Thread.sleep(2000);
-    	 lpo.enterPassword().sendKeys("admin123");
+    	 lpo.enterPassword().sendKeys(constant.validpassword);
     	 
     	 Thread.sleep(2000);
     	 lpo.clickOnLoginButton().click();
     	 
     	 Thread.sleep(3000);
-    	 commonMethods.handleAssertion(lpo.validationTextAfterLogin().getText(), "Dashboard");
+    	 commonMethods.handleAssertion(lpo.validationTextAfterLogin().getText(), constant.validlogintext);
     	
       }
 	  
@@ -44,16 +45,16 @@ public class loginTestCases extends baseClass
 	    	 loginPageObject lpo= new loginPageObject(driver);
 	    	 
 	    	 Thread.sleep(2000);
-	    	 lpo.enterUsername().sendKeys("Admin");
+	    	 lpo.enterUsername().sendKeys(constant.validusername);
 	    	 
 	    	 Thread.sleep(2000);
-	    	 lpo.enterPassword().sendKeys("admin1555");
+	    	 lpo.enterPassword().sendKeys(constant.invalidpassword);
 	    	 
 	    	 Thread.sleep(2000);
 	    	 lpo.clickOnLoginButton().click();
 	    	 
 	    	 Thread.sleep(3000);
-	    	 commonMethods.handleAssertion(lpo.invalidTextAfterLogin().getText(), "Invalid credentials");
+	    	 commonMethods.handleAssertion(lpo.invalidTextAfterLogin().getText(), constant.invalidlogintext);
 	    	 
 	  }
 }
