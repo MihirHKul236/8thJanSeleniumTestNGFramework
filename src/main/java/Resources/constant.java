@@ -18,7 +18,7 @@ public class constant
 	public static String otherid="SRT234";
 	public static String drivinglicensenumber="MH15DK2345";
 	public static String nationdropdowntext="Indian";
-	public static String statusdropdowntext="Married";
+	public static String statusdropdowntext="Single";
 	public static String bloodgroupdropdowntext="B-";
 	public static String myinfopagetext="PIM";
 			
