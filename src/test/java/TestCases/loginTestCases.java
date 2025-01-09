@@ -7,6 +7,7 @@ import org.testng.asserts.SoftAssert;
 
 import PageObjectModel.loginPageObject;
 import Resources.baseClass;
+import Resources.commonMethods;
 
 public class loginTestCases extends baseClass
 {
@@ -29,13 +30,8 @@ public class loginTestCases extends baseClass
     	 lpo.clickOnLoginButton().click();
     	 
     	 Thread.sleep(3000);
-    	 SoftAssert sa = new SoftAssert();
-    	 String Actual_text=lpo.validationTextAfterLogin().getText();
-    	 String Expected_text="Dashboard";
-    	 
-    	 Thread.sleep(3000);
-    	 sa.assertEquals(Actual_text, Expected_text);
-    	 sa.assertAll();
+    	 commonMethods.handleAssertion(lpo.validationTextAfterLogin().getText(), "Dashboard");
+    	
       }
 	  
 	  @Test(priority=1)
@@ -57,12 +53,7 @@ public class loginTestCases extends baseClass
 	    	 lpo.clickOnLoginButton().click();
 	    	 
 	    	 Thread.sleep(3000);
-	    	 SoftAssert sa= new SoftAssert();
-	    	 String Actual_text=lpo.invalidTextAfterLogin().getText();
-	    	 String Expected_text="Invalid credentials";
+	    	 commonMethods.handleAssertion(lpo.invalidTextAfterLogin().getText(), "Invalid credentials");
 	    	 
-	    	 Thread.sleep(3000);
-	    	 sa.assertEquals(Actual_text,Expected_text);
-	    	 sa.assertAll();
 	  }
 }

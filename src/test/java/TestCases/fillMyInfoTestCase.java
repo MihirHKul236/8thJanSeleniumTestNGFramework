@@ -16,6 +16,7 @@ import org.testng.asserts.SoftAssert;
 import PageObjectModel.loginPageObject;
 import PageObjectModel.myInfoPageObject;
 import Resources.baseClass;
+import Resources.commonMethods;
 
 public class fillMyInfoTestCase extends baseClass
 {
@@ -77,50 +78,22 @@ public class fillMyInfoTestCase extends baseClass
     	 mipo.clickOnNationalityDropdown().click();
     	 
     	 Thread.sleep(2000);
-    	 List<WebElement> country= mipo.selectCountryFromDropdown();
-    	 int Size= country.size();
-    	 for(int i=0;i<Size;i++)
-    	 {
-    		 if(country.get(i).getText().equalsIgnoreCase("Indian"))
-    		 {
-    			 Thread.sleep(3000);
-    			 country.get(i).click();
-    			 break;
-    		 }
-    	 }
+    	 commonMethods.handleDropdown(mipo.selectCountryFromDropdown(), "Indian");
+    	
     	 
     	 Thread.sleep(2000);
     	 mipo.clickOnStatusDropdown().click();
     	 
     	 Thread.sleep(2000);
-    	 List<WebElement> status= mipo.selectStatusFromDropdown();
-    	 int Size1= status.size();
-    	 for(int i=0;i<Size1;i++)
-    	 {
-    		 if(status.get(i).getText().equalsIgnoreCase("Married"))
-    		 {
-    			 Thread.sleep(3000);
-    			 status.get(i).click();
-    			 break;
-    		 }
-    	 }
+    	 commonMethods.handleDropdown(mipo.selectStatusFromDropdown(), "Married");
+    	
     	 
     	 Thread.sleep(3000);
     	 mipo.clickOnBloodGroupDropdown().click();
     	 
     	 Thread.sleep(2000);
-    	 List<WebElement> bloodgroup= mipo.selectBloodGroupFromDropdown();
-    	 int Size2= bloodgroup.size();
-    	 for(int i=0;i<Size2;i++)
-    	 {
-    		 if(bloodgroup.get(i).getText().equalsIgnoreCase("B-"))
-    		 {
-    			 Thread.sleep(3000);
-    			 bloodgroup.get(i).click();
-    			 break;
-    		 }
-    	 }
-    	 
+    	 commonMethods.handleDropdown(mipo.selectBloodGroupFromDropdown(), "B-");
+    
     	 Thread.sleep(3000);
     	 mipo.clickOnAddButton().click();
     	 
@@ -138,13 +111,8 @@ public class fillMyInfoTestCase extends baseClass
     	robot.keyRelease(KeyEvent.VK_ENTER);
     	
     	Thread.sleep(3000);
-    	SoftAssert sa= new SoftAssert();
-    	String Actual_text= mipo.validationTextOnMyInfoPage().getText();
-    	String Expected_text="PIM";
+    	commonMethods.handleAssertion(mipo.validationTextOnMyInfoPage().getText(), "PIM");
     	
-    	Thread.sleep(3000);
-    	sa.assertEquals(Actual_text,Expected_text);
-    	sa.assertAll();
      	 
     	 
      }
