@@ -9,4 +9,7 @@ public class constant
 	public static String validlogintext="Dashboard";
 	public static String invalidpassword="admin1555";
 	public static String invalidlogintext="Invalid credentials";
+	
+	// My info page constant
+	public static String firstname="Sachin";
 }

@@ -14,11 +14,7 @@ public class loginTestCases extends baseClass
 {
 	  @Test(priority=0)
       public void verifyValidLogin() throws IOException, InterruptedException
-      {
-    	 intializeBrowser();
-    	 
-    	 driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-    	 
+      {	 
     	 loginPageObject lpo= new loginPageObject(driver);
     	 
     	 Thread.sleep(2000);
@@ -38,10 +34,7 @@ public class loginTestCases extends baseClass
 	  @Test(priority=1)
 	  public void verifyInvalidLogin() throws IOException, InterruptedException
 	  {
-		    intializeBrowser();
-	    	 
-	    	 driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-	    	 
+		  
 	    	 loginPageObject lpo= new loginPageObject(driver);
 	    	 
 	    	 Thread.sleep(2000);

@@ -17,6 +17,7 @@ import PageObjectModel.loginPageObject;
 import PageObjectModel.myInfoPageObject;
 import Resources.baseClass;
 import Resources.commonMethods;
+import Resources.constant;
 
 public class fillMyInfoTestCase extends baseClass
 {
@@ -24,17 +25,14 @@ public class fillMyInfoTestCase extends baseClass
 	 @Test
      public void fillMyInfo() throws IOException, InterruptedException, AWTException
      {
-          intializeBrowser();
-    	 
-    	 driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
     	 
     	 loginPageObject lpo= new loginPageObject(driver);
     	 
     	 Thread.sleep(2000);
-    	 lpo.enterUsername().sendKeys("Admin");
+    	 lpo.enterUsername().sendKeys(constant.validusername);
     	 
     	 Thread.sleep(2000);
-    	 lpo.enterPassword().sendKeys("admin123");
+    	 lpo.enterPassword().sendKeys(constant.validpassword);
     	 
     	 Thread.sleep(3000);
     	 lpo.clickOnLoginButton().click();
@@ -47,7 +45,7 @@ public class fillMyInfoTestCase extends baseClass
     	 Thread.sleep(2000);
     	 mipo.enterFirstName().sendKeys(Keys.chord(Keys.CONTROL,"a",Keys.DELETE)); 	 
     	 Thread.sleep(2000);
-    	 mipo.enterFirstName().sendKeys("Sachin");
+    	 mipo.enterFirstName().sendKeys(constant.firstname);
     	 
     	 Thread.sleep(2000);
     	 mipo.enterMiddleName().sendKeys(Keys.chord(Keys.CONTROL,"a",Keys.DELETE));
@@ -111,6 +109,7 @@ public class fillMyInfoTestCase extends baseClass
     	robot.keyRelease(KeyEvent.VK_ENTER);
     	
     	Thread.sleep(3000);
+    	//commonMethods.explictWait(driver, mipo.validationTextOnMyInfoPage(), 10);
     	commonMethods.handleAssertion(mipo.validationTextOnMyInfoPage().getText(), "PIM");
     	
      	 

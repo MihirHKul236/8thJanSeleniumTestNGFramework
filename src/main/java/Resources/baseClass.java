@@ -8,15 +8,18 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeMethod;
 
 public class baseClass 
 {
 	  public WebDriver driver;
+	  public Properties prop;
       public void intializeBrowser() throws IOException
       {
     	   FileInputStream fis = new FileInputStream("E:\\SeleniumTestNGFrameworkProject\\Selenium8thJanTestNGProject\\src\\main\\java\\Resources\\data.properties");
     	   
-    	   Properties prop = new Properties();
+    	   prop = new Properties();
     	   
     	   prop.load(fis);
     	   
@@ -45,8 +48,27 @@ public class baseClass
     	   {
     		   System.out.println("Please select the correcr browser");
     	   }
-    	   
-    	   
-    	   
+    	   	   
       }
+      
+      @BeforeMethod
+      public void urlLaunch() throws IOException, InterruptedException
+      {
+    	  Thread.sleep(2000);
+    	  
+    	  intializeBrowser();
+    	  
+    	  String URL =prop.getProperty("url");
+    	  
+    	  driver.get(URL);
+    	  
+      }
+      
+      @AfterClass
+      public void quitBrowser() throws InterruptedException
+      {
+    	  Thread.sleep(2000);
+    	  driver.quit();
+      }
+      
 }
