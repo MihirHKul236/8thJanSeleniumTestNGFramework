@@ -19,7 +19,7 @@ public class constant
 	public static String drivinglicensenumber="MH15DK2345";
 	public static String nationdropdowntext="Indian";
 	public static String statusdropdowntext="Single";
-	public static String bloodgroupdropdowntext="B-";
+	public static String bloodgroupdropdowntext="B+";
 	public static String myinfopagetext="PIM";
 			
 }
