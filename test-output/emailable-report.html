@@ -9,12 +9,35 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">160,892</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Regression test cases</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">67,832</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">Smoke test cases</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">74,816</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">2</th><th class="num">0</th><th class="num">0</th><th class="num attn">1</th><th class="num">142,648</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">TestCases.fillMyInfoTestCase</td><td><a href="#m0">fillMyInfo</a></td><td rowspan="1">1736407697888</td><td rowspan="1">81360</td></tr><tr class="passedodd"><td rowspan="2">TestCases.loginTestCases</td><td><a href="#m1">verifyInvalidLogin</a></td><td rowspan="1">1736407670621</td><td rowspan="1">13973</td></tr><tr class="passedodd"><td><a href="#m2">verifyValidLogin</a></td><td rowspan="1">1736407640266</td><td rowspan="1">13667</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Regression test cases &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">TestCases.loginTestCases</td><td><a href="#m0">verifyInvalidLogin</a></td><td rowspan="1">1736773924225</td><td rowspan="1">13851</td></tr><tr class="passedeven"><td><a href="#m1">verifyValidLogin</a></td><td rowspan="1">1736773893605</td><td rowspan="1">16209</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">Smoke test cases &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">TestCases.fillMyInfoTestCase</td><td><a href="#m2">fillMyInfo</a></td><td rowspan="1">1736773953793</td><td rowspan="1">61678</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">TestCases.fillMyInfoTestCase#fillMyInfo</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">TestCases.loginTestCases#verifyInvalidLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">TestCases.loginTestCases#verifyValidLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Regression test cases</h2><h3 id="m0">TestCases.loginTestCases#verifyInvalidLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">TestCases.loginTestCases#verifyValidLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Smoke test cases</h2><h3 id="m2">TestCases.fillMyInfoTestCase#fillMyInfo</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button data-v-10d463b7=&quot;&quot; data-v-3dab643a=&quot;&quot; type=&quot;button&quot; class=&quot;oxd-button oxd-button--medium oxd-button--text&quot;&gt;...&lt;/button&gt; is not clickable at point (716, 591). Other element would receive the click: &lt;div data-v-d130bb63=&quot;&quot; data-v-13cf171c=&quot;&quot; role=&quot;option&quot; class=&quot;oxd-select-option --selected&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=131.0.6778.265)
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [67bbfd1c0d502b08cbde8df1fdba1db4, clickElement {id=f.F45BF19D117E951FEDB1BABF85E6CBD3.d.49293AD37FB5D8EDE804012A4BB1669D.e.318}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.265, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: C:\Users\hp\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65238}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65238/devtoo..., se:cdpVersion: 131.0.6778.265, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (67bbfd1c0d502b08cbde8df1fdba1db4)] -&gt; xpath: //button[@class=&apos;oxd-button oxd-button--medium oxd-button--text&apos;]]
+Session ID: 67bbfd1c0d502b08cbde8df1fdba1db4
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at TestCases.fillMyInfoTestCase.fillMyInfo(fillMyInfoTestCase.java:96)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

@@ -1,19 +1,27 @@
 package Resources;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Properties;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 
 public class baseClass 
 {
-	  public WebDriver driver;
+	  public static WebDriver driver;
 	  public Properties prop;
       public void intializeBrowser() throws IOException
       {
@@ -48,7 +56,42 @@ public class baseClass
     	   {
     		   System.out.println("Please select the correcr browser");
     	   }
+    	   
+    	   
+    	   
     	   	   
+      }
+      
+      @BeforeTest
+      public void ExtentReport()
+      {
+    	  extentManager.setup();
+      }
+      
+      @AfterTest
+      public void EndReport()
+      {
+    	  extentManager.endReport();
+      }
+      
+      // To take screenshot and store in folder
+      public static String screenShot(WebDriver driver,String filename)
+      {
+    	  String dateName= new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+    	  
+    	  TakesScreenshot takesscreenshot=(TakesScreenshot) driver;
+    	  File source=takesscreenshot.getScreenshotAs(OutputType.FILE);
+    	  String Destination=System.getProperty("user.dir")+"\\ScreenShot\\" + filename + "_" + dateName + ".png";
+    	  File finalDestination= new File(Destination);
+    	  try
+    	  {
+    		  FileUtils.copyDirectory(source, finalDestination);
+    	  }
+    	  catch(Exception e)
+    	  {
+    		  e.getMessage();
+    	  }
+    	  return Destination;
       }
       
       @BeforeMethod
